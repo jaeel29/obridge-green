@@ -22,7 +22,9 @@ const Header = () => {
             </div>
           </div>
           <div className={classes.btn}>
-            <Button Icon={ArrowCircle}>Sign In</Button>
+            <Button Icon={ArrowCircle} primary>
+              Sign In
+            </Button>
           </div>
         </div>
       </div>

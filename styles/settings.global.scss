@@ -70,6 +70,8 @@ body {
     list-style: none;
     padding-left: 0;
   }
+
+  // Container (Wrapper)
   .container {
     width: 1600px;
     max-width: 95%;
@@ -78,4 +80,26 @@ body {
     padding-left: 15px;
     padding-right: 15px;
   }
+}
+
+.mg_top {
+  margin-top: 4rem;
+}
+
+// Animations
+.primary_move {
+  animation: primary_move 2s ease-in-out infinite;
+  position: absolute;
+  top: 0%;
+  left: 40%;
+}
+.second_move {
+  position: absolute;
+  animation: second_move 2s ease-in-out infinite;
+  bottom: 0%;
+  left: 55%;
+}
+.bounce {
+  position: absolute;
+  animation: bounce 2s ease-in-out infinite;
 }

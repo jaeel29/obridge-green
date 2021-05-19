@@ -1,15 +1,21 @@
-.button {
+.primary,
+.primary_fill,
+.secondary {
   position: relative;
   display: flex;
   align-items: center;
   border-radius: 35px;
-  padding: 2px 5px 2px 20px;
   outline: none;
-  background-color: white;
-  border: 2px solid #7cd6c8;
   font-size: 17px;
-  color: #7cd6c8;
   cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.primary {
+  background-color: white;
+  padding: 2px 5px 2px 20px;
+  border: 2px solid #7cd6c8;
+  color: #7cd6c8;
   &::after {
     content: "";
     position: absolute;
@@ -21,7 +27,6 @@
     border-radius: 35px;
     z-index: -1;
     margin: -6px;
-    transition: all 0.2s linear;
   }
   span {
     margin-right: 0.7rem;
@@ -34,5 +39,29 @@
     &::after {
       transform: scale(0.9);
     }
+  }
+}
+
+.primary_fill {
+  padding: 1rem 2rem;
+  background-color: var(--main-color);
+  border: 2px solid #7cd6c8;
+  color: #fff;
+  span {
+    margin-right: 1.3rem;
+  }
+  &:hover {
+    background-color: var(--main-color-500);
+  }
+}
+
+.secondary {
+  border: none;
+  color: var(--black);
+  background-color: transparent;
+  text-decoration: underline;
+  margin-left: 2rem;
+  span {
+    margin-left: 1rem;
   }
 }
