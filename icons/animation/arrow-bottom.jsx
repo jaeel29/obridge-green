@@ -1,7 +1,7 @@
 function BigArrowBottom() {
   return (
     <svg
-      className="mg_top"
+      className="mg_top bounce"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="38"

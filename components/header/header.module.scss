@@ -17,4 +17,27 @@
       }
     }
   }
+  @media screen and (max-width: 769px) {
+    .navbar {
+      .menu {
+        .links {
+          margin-left: 2rem;
+          a {
+            margin-left: 1.3rem;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 426px) {
+    padding: 2rem 0.5rem;
+    .navbar {
+      .menu {
+        .links {
+          display: none;
+        }
+      }
+    }
+  }
 }

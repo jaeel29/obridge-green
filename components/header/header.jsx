@@ -7,7 +7,7 @@ import classes from "./header.module.scss";
 const Header = () => {
   return (
     <div className={classes.header}>
-      <div className="container">
+      <div className="container-md">
         <div className={classes.navbar}>
           <div className={classes.menu}>
             <div className={classes.logo}>

@@ -58,6 +58,7 @@
 body {
   font-family: "Lufga Regular";
   color: var(--black);
+  overflow-x: hidden;
   a {
     font-family: "Lufga Semi Bold";
     font-size: 17px;
@@ -72,13 +73,23 @@ body {
   }
 
   // Container (Wrapper)
-  .container {
-    width: 1600px;
-    max-width: 95%;
-    max-width: 95%;
+  .container-md {
+    width: 85%;
     margin: auto;
     padding-left: 15px;
     padding-right: 15px;
+    @media screen and (max-width: 769px) {
+      width: 100%;
+    }
+  }
+  .container-lg {
+    width: 97%;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    @media screen and (max-width: 769px) {
+      width: 100%;
+    }
   }
 }
 
@@ -88,18 +99,72 @@ body {
 
 // Animations
 .primary_move {
-  animation: primary_move 2s ease-in-out infinite;
+  animation: primary_move 4s ease-in-out infinite;
   position: absolute;
   top: 0%;
   left: 40%;
+  @media screen and (max-width: 1025px) {
+    left: 60%;
+  }
+  @media screen and (max-width: 426px) {
+    display: none;
+  }
 }
 .second_move {
   position: absolute;
-  animation: second_move 2s ease-in-out infinite;
+  animation: second_move 6s ease-in-out infinite;
   bottom: 0%;
   left: 55%;
+  @media screen and (max-width: 1025px) {
+    left: 40%;
+  }
+  @media screen and (max-width: 426px) {
+    display: none;
+  }
 }
 .bounce {
-  position: absolute;
   animation: bounce 2s ease-in-out infinite;
+}
+.arrows {
+  animation: arrows 2s ease-in-out infinite;
+}
+
+@keyframes primary_move {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateX(40px) translateY(220px) rotate(180deg);
+  }
+}
+
+@keyframes second_move {
+  0%,
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+  50% {
+    transform: translateX(350px) rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes arrows {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
 }

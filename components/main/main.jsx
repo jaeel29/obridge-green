@@ -11,7 +11,7 @@ import classes from "./main.module.scss";
 const Main = () => {
   return (
     <div className={classes.main}>
-      <div className="container">
+      <div className="container-lg">
         <div className={classes.content}>
           <div className={classes.main__left}>
             <h1>
@@ -37,7 +37,7 @@ const Main = () => {
             </div>
           </div>
           <div className={classes.main__right}>
-            <Image src="/illustration.png" width={960} height={480} />
+            <Image src="/illustration.png" width={1260} height={630} />
           </div>
         </div>
         <BallObject />
